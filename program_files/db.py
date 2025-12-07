@@ -34,7 +34,7 @@ class Database:
             self.cursor.execute(query)
             return self.cursor.fetchall()
         except Exception as e:
-            print(f"❌ Помилка завантаження пасажирів: {e}")
+            print(f"Помилка завантаження пасажирів: {e}")
             return []
 
     # Видалення пасажира
@@ -72,7 +72,7 @@ class Database:
             f.available_seats,
             f.departure_date, 
             f.departure_time,
-            f.airplane_id  -- 🟢 ВАЖЛИВО: Дістаємо ID літака для кнопки "Екіпаж"
+            f.airplane_id
         FROM
             [dbo].[Flights] f
         JOIN
@@ -97,7 +97,7 @@ class Database:
             return raw_flights
             
         except Exception as e:
-            print(f"❌ Помилка при пошуку рейсів: {e}")
+            print(f"Помилка при пошуку рейсів: {e}")
             return []
 
     # Отримання всіх рейсів (для алгоритму Дейкстри)
@@ -118,7 +118,7 @@ class Database:
             self.cursor.execute(query)
             return self.cursor.fetchall()
         except Exception as e:
-            print(f"❌ Помилка при отриманні усіх рейсів: {e}")
+            print(f"Помилка при отриманні усіх рейсів: {e}")
             return []
 
     # Отримання членів екіпажу літака
@@ -140,25 +140,25 @@ class Database:
             crew_list = cursor.fetchall()
             return crew_list
         except Exception as e:
-            print(f"❌ Помилка отримання екіпажу: {e}")
+            print(f"Помилка отримання екіпажу: {e}")
             return []
 
     # Покупка квитка
     def add_ticket_purchase(self, user_id, flight_id, ticket_type, price):
 
         if not self.cursor.connection: 
-            print("❌ Немає з'єднання з БД")
+            print("Немає з'єднання з БД")
             return False
         
         try:
             self.cursor.execute("INSERT INTO dbo.UserTickets (user_id, flight_id, ticket_type, price) VALUES (?, ?, ?, ?)", (user_id, flight_id, ticket_type, price))
             self.cursor.connection.commit()
             
-            print(f"✅ Квиток на рейс {flight_id} успішно додано для користувача {user_id}")
+            print(f"Квиток на рейс {flight_id} успішно додано для користувача {user_id}")
             return True
             
         except Exception as e:
-            print(f"❌ Помилка при купівлі квитка: {e}")
+            print(f"Помилка при купівлі квитка: {e}")
             self.cursor.connection.rollback()
             return False
     
@@ -190,7 +190,7 @@ class Database:
             tickets = self.cursor.fetchall()
             return tickets
         except Exception as e:
-            print(f"❌ Помилка отримання історії квитків: {e}")
+            print(f"Помилка отримання історії квитків: {e}")
             return []
     
     # Зменшення кількості вільних місць на рейсі
@@ -203,13 +203,13 @@ class Database:
             row = self.cursor.fetchone()
             
             if not row:
-                print(f"❌ Рейс {flight_id} не знайдено.")
+                print(f"Рейс {flight_id} не знайдено.")
                 return False
                 
             available_seats = row[0]
             
             if available_seats <= 0:
-                print(f"⚠️ На рейсі {flight_id} немає вільних місць!")
+                print(f"На рейсі {flight_id} немає вільних місць!")
                 return False
 
             update_query = "UPDATE [dbo].[Flights] SET available_seats = available_seats - 1 WHERE flight_id = ?"
@@ -217,13 +217,13 @@ class Database:
             
             if self.cursor.rowcount > 0:
                 self.cursor.connection.commit()
-                print(f"✅ Місце на рейсі {flight_id} успішно заброньовано. Залишилось: {available_seats - 1}")
+                print(f"Місце на рейсі {flight_id} успішно заброньовано. Залишилось: {available_seats - 1}")
                 return True
             else:
                 return False
                 
         except Exception as e:
-            print(f"❌ Помилка при оновленні місць: {e}")
+            print(f"Помилка при оновленні місць: {e}")
             self.connection.rollback()
             return False
 
