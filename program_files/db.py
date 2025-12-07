@@ -232,6 +232,8 @@ class Database:
         self.cursor.close()
         self.conn.close()
 
+
+
 # Збереження сесії користувача
 class UserSession:
     _instance = None
