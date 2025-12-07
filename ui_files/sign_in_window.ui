@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SignIn</class>
+ <widget class="QDialog" name="SignIn">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>601</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sign In</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #e6f2ff;   /* ніжно-голубий */</string>
+  </property>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>120</y>
+     <width>361</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;      /* білий фон */
+
+    border-radius: 15px; </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/avatar_11598848.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sign_in_label2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>10</y>
+      <width>191</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 16pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+    </property>
+    <property name="text">
+     <string>Увійдіть в акаунт</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="email_sign_in">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>340</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>340</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Email</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password_sign_in_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>340</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>340</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Пароль</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sign_in_btn">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#sign_in_btn {
+    background-color: #1e90ff;   /* синій фон */
+    color: white;                /* білий текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;
+}
+
+QPushButton#sign_in_btn:hover {
+    background-color: #f0f8ff;   /* світло-голубий фон */
+	color: #1e90ff;
+    border: 2px solid #5dade2;
+}
+
+QPushButton#sign_in_btn:pressed {
+    background-color: white;     /* фон білий */
+    color: #1e90ff;              /* текст синій */
+    border: 2px solid #1e90ff;   /* синя рамка */
+}</string>
+    </property>
+    <property name="text">
+     <string>Увійти</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="cloud1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>201</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cloud2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>10</y>
+     <width>201</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cloud3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>260</y>
+     <width>201</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>cloud3</zorder>
+  <zorder>cloud2</zorder>
+  <zorder>cloud1</zorder>
+  <zorder>frame_2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

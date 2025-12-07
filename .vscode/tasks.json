@@ -1,0 +1,48 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build core_backend.pyd",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                // 1. Стандартні прапори
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++17",
+
+                // 2. ❗ КРИТИЧНО: Прапори для створення DLL/PYD
+                "-shared", 
+                "-fPIC", 
+
+                // 3. 🟢 Прапори Include (Шляхи до заголовків)
+                "-I", "C:/Users/Admin/AppData/Local/Programs/Python/Python312/Include",
+                "-I", "C:/Users/Admin/AppData/Local/Programs/Python/Python312/Lib/site-packages/pybind11/include",
+                
+                // 4. 🟢 ФАЙЛИ C++ ДЛЯ КОМПІЛЯЦІЇ (ЛИШЕ ОДИН РАЗ!)
+                // Використовуємо явні шляхи на основі поточної директорії
+                "${fileDirname}\\pythonModule.cpp", 
+                "${fileDirname}\\system.cpp", 
+
+                // 5. ❗ КРИТИЧНО: Прапори для ЛІНКУВАННЯ
+                "-L", "C:/Users/Admin/AppData/Local/Programs/Python/Python312/libs", 
+                "-lpython312", 
+
+                // 6. Назва вихідного файлу
+                "-o",
+                "${fileDirname}\\core_backend.pyd"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Task generated for Pybind11 compilation."
+        }
+    ],
+    "version": "2.0.0"
+}

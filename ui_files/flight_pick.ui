@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FlightPick</class>
+ <widget class="QDialog" name="FlightPick">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>781</width>
+    <height>763</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #e6f2ff;   /* ніжно-голубий */
+</string>
+  </property>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>771</width>
+     <height>741</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: white;      /* білий фон */
+
+    border-radius: 15px; </string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QListWidget" name="flightsListWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>721</width>
+      <height>671</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 14pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+    </property>
+    <property name="text">
+     <string>Рейси</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="price_sort_btn">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#price_sort_btn {
+    background-color: #1e90ff;   /* синій фон */
+    color: white;                /* білий текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;
+}
+
+QPushButton#price_sort_btn:hover {
+    background-color: #f0f8ff;   /* світло-голубий фон */
+	color: #1e90ff;
+    border: 2px solid #5dade2;
+}
+
+QPushButton#price_sort_btn:pressed {
+    background-color: white;     /* фон білий */
+    color: #1e90ff;              /* текст синій */
+    border: 2px solid #1e90ff;   /* синя рамка */
+}</string>
+    </property>
+    <property name="text">
+     <string>За ціною</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sign_in_btn_2">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>20</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#sign_in_btn {
+    background-color: #1e90ff;   /* синій фон */
+    color: white;                /* білий текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;
+}
+
+QPushButton#sign_in_btn:hover {
+    background-color: #f0f8ff;   /* світло-голубий фон */
+	color: #1e90ff;
+    border: 2px solid #5dade2;
+}
+
+QPushButton#sign_in_btn:pressed {
+    background-color: white;     /* фон білий */
+    color: #1e90ff;              /* текст синій */
+    border: 2px solid #1e90ff;   /* синя рамка */
+}</string>
+    </property>
+    <property name="text">
+     <string>За ціною</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="time_sort_btn">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#time_sort_btn {
+    background-color: #1e90ff;   /* синій фон */
+    color: white;                /* білий текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;
+}
+
+QPushButton#time_sort_btn:hover {
+    background-color: #f0f8ff;   /* світло-голубий фон */
+	color: #1e90ff;
+    border: 2px solid #5dade2;
+}
+
+QPushButton#time_sort_btn:pressed {
+    background-color: white;     /* фон білий */
+    color: #1e90ff;              /* текст синій */
+    border: 2px solid #1e90ff;   /* синя рамка */
+}</string>
+    </property>
+    <property name="text">
+     <string>За часом</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

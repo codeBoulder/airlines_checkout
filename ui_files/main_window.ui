@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>844</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ariline_checkout</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #e6f2ff;   /* ніжно-голубий */
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>951</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;      /* білий фон */
+
+    border-radius: 15px; </string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="search_btn">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>40</y>
+       <width>79</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#search_btn {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14px;             /* розмір шрифту */
+    font-weight: bold;           /* жирний текст */
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;           /* внутрішні відступи */
+}
+
+QPushButton#search_btn:hover {
+    background-color: #f0f8ff;   /* легкий голубий при наведенні */
+}
+
+QPushButton#search_btn:pressed {
+    background-color: #1e90ff;   /* фон стає синім */
+    color: white;                /* текст стає білий */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Downloads/search.png</normaloff>../../../Downloads/search.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>35</width>
+       <height>35</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="date1">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>80</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QDateEdit {
+    background-color: white;
+    color: #1e90ff;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+/* Наведення */
+QDateEdit:hover {
+    background-color: #f0f8ff;
+}
+
+/* Фокус */
+QDateEdit:focus {
+    border: 2px solid #104e8b;
+    background-color: #e6f2ff;
+}
+
+/* Прибираємо стандартний drop-down */
+QDateEdit::drop-down {
+    border: none;
+    width: 0px;
+}
+
+QDateEdit::up-button, 
+QDateEdit::down-button {
+    width: 0px;
+    height: 0px;
+    border: none;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="date1_label">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>50</y>
+       <width>74</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 14pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+     </property>
+     <property name="text">
+      <string>Виліт</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="date2">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>80</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QDateEdit {
+    background-color: white;
+    color: #1e90ff;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+/* Наведення */
+QDateEdit:hover {
+    background-color: #f0f8ff;
+}
+
+/* Фокус */
+QDateEdit:focus {
+    border: 2px solid #104e8b;
+    background-color: #e6f2ff;
+}
+
+/* Прибираємо стандартний drop-down */
+QDateEdit::drop-down {
+    border: none;
+    width: 0px;
+}
+
+QDateEdit::up-button, 
+QDateEdit::down-button {
+    width: 0px;
+    height: 0px;
+    border: none;
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="date2_label">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>50</y>
+       <width>121</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 14pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+     </property>
+     <property name="text">
+      <string>Повернення</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="from_edit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>200</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Пункт відправлення</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="to_edit">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>80</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>250</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Пункт прибуття</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="date1_label_2">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>30</y>
+       <width>74</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 18pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+     </property>
+     <property name="text">
+      <string>Рейси</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../pics/icons8-airplane-64.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="company_name">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#company_name {
+    color: #1565c0;              /* темно-синій */
+    font-size: 24pt;             /* великий шрифт */
+    font-weight: bold;           /* жирний */
+    background-color: transparent; /* прозорий фон */
+    qproperty-alignment: 'AlignCenter'; /* по центру */
+}</string>
+    </property>
+    <property name="text">
+     <string>AeroNova</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="icon">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/plane.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cloud1">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-40</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cloud3">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>-30</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cloud2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>110</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cloud4">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>100</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>230</y>
+      <width>421</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;      /* білий фон */
+
+    border-radius: 15px; </string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="sign_in_btn">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>60</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#sign_in_btn {
+    background-color: #1e90ff;   /* синій фон */
+    color: white;                /* білий текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;
+}
+
+QPushButton#sign_in_btn:hover {
+    background-color: #f0f8ff;   /* світло-голубий фон */
+	color: #1e90ff;
+    border: 2px solid #5dade2;
+}
+
+QPushButton#sign_in_btn:pressed {
+    background-color: white;     /* фон білий */
+    color: #1e90ff;              /* текст синій */
+    border: 2px solid #1e90ff;   /* синя рамка */
+}</string>
+     </property>
+     <property name="text">
+      <string>Увійти</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="register_btn">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>60</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#register_btn {
+    background-color: #1e90ff;   /* синій фон */
+    color: white;                /* білий текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;
+}
+
+QPushButton#register_btn:hover {
+    background-color: #f0f8ff;   /* світло-голубий фон */
+	color: #1e90ff;
+    border: 2px solid #5dade2;
+}
+
+QPushButton#register_btn:pressed {
+    background-color: white;     /* фон білий */
+    color: #1e90ff;              /* текст синій */
+    border: 2px solid #1e90ff;   /* синя рамка */
+}</string>
+     </property>
+     <property name="text">
+      <string>Зареєструватися</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="profile_label">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>131</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 14pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+     </property>
+     <property name="text">
+      <string>Ваш профіль</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: white;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../Downloads/avatar_11598848.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="user_name">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>381</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 16pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="user_info_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>381</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 14pt;         /* розмір шрифту */
+    background-color: transparent; /* прозорий фон */
+</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <zorder>user_name</zorder>
+    <zorder>sign_in_btn</zorder>
+    <zorder>register_btn</zorder>
+    <zorder>profile_label</zorder>
+    <zorder>label_6</zorder>
+    <zorder>user_info_label</zorder>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>240</y>
+      <width>401</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: white;
+border-radius: 15px; </string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>381</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../Downloads/main_pic_1.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+   <widget class="QLabel" name="cloud2_2">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>350</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cloud2_3">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>660</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cloud2_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>510</y>
+      <width>201</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>cloud2_4</zorder>
+   <zorder>cloud2_3</zorder>
+   <zorder>cloud2_2</zorder>
+   <zorder>cloud4</zorder>
+   <zorder>cloud2</zorder>
+   <zorder>cloud3</zorder>
+   <zorder>cloud1</zorder>
+   <zorder>frame</zorder>
+   <zorder>company_name</zorder>
+   <zorder>icon</zorder>
+   <zorder>frame_2</zorder>
+   <zorder>stackedWidget</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

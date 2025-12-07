@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registration</class>
+ <widget class="QDialog" name="Registration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>641</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Register</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #e6f2ff;</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>561</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: white;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <widget class="QLabel" name="profile_label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 20pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+    </property>
+    <property name="text">
+     <string>Зареєструватись</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="reg_icon">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/file_4512928.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="name_reg">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Ім'я</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="surname">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>60</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Прізвище</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="email_reg">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Email</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password_reg">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>110</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::PasswordEchoOnEdit</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Пароль</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="birth_date">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDateEdit {
+    background-color: white;
+    color: #1e90ff;
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+/* Наведення */
+QDateEdit:hover {
+    background-color: #f0f8ff;
+}
+
+/* Фокус */
+QDateEdit:focus {
+    border: 2px solid #104e8b;
+    background-color: #e6f2ff;
+}
+
+/* Прибираємо стандартний drop-down */
+QDateEdit::drop-down {
+    border: none;
+    width: 0px;
+}
+
+QDateEdit::up-button, 
+QDateEdit::down-button {
+    width: 0px;
+    height: 0px;
+    border: none;
+}</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="profile_label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>191</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: #1565c0;          /* темно-синій текст */
+    font-size: 16pt;         /* розмір шрифту */
+    font-weight: bold;       /* жирний */
+    background-color: transparent; /* прозорий фон */
+}</string>
+    </property>
+    <property name="text">
+     <string>Дата народження</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="create_account_btn">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>330</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#create_account_btn {
+    background-color: #1e90ff;   /* синій фон */
+    color: white;                /* білий текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;          /* округлені кути */
+    padding: 6px 12px;
+}
+
+QPushButton#create_account_btn:hover {
+    background-color: #f0f8ff;   /* світло-голубий фон */
+	color: #1e90ff;
+    border: 2px solid #5dade2;
+}
+
+QPushButton#create_account_btn:pressed {
+    background-color: white;     /* фон білий */
+    color: #1e90ff;              /* текст синій */
+    border: 2px solid #1e90ff;   /* синя рамка */
+}</string>
+    </property>
+    <property name="text">
+     <string>Створити акаунт</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="passport">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: white;     /* білий фон */
+    color: #1e90ff;              /* синій текст */
+    font-size: 14pt;
+    font-weight: bold;
+    border: 2px solid #1e90ff;   /* синя рамка */
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QLineEdit:focus {
+    background-color: #f0f8ff;   /* легкий голубий при фокусі */
+}
+QLineEdit:hover {
+    background-color: #f0f8ff;   /* легкий голубий */
+}
+</string>
+    </property>
+    <property name="placeholderText">
+     <string>Номер паспорта</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="cloud2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>201</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cloud1">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>330</y>
+     <width>201</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/cloud-computing.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>cloud1</zorder>
+  <zorder>cloud2</zorder>
+  <zorder>frame</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
